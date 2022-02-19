@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import { reactive } from "vue";
 
 const state = reactive({
-  message: 'You did it!'
+  message: 'Yeahh! You did it!'
 });
 
 </script>
@@ -14,16 +14,16 @@ const state = reactive({
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld :msg="state.message"></HelloWorld>
+      <hello-world :msg="state.message"></hello-world>
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <router-view />
 </template>
 
 <style>
