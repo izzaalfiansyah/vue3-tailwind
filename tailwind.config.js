@@ -12,16 +12,13 @@ module.exports = {
     ],
     safelist: [
         {
-            pattern: /bg-/,
+            pattern: /(bg|text|border|ring)-/,
         },
         {
-            pattern: /text-/,
+            pattern: /(p|px|py|pl|pt|pb|pr)-/,
         },
         {
-            pattern: /border-/,
-        },
-        {
-            pattern: /ring-/,
+            pattern: /(m|mx|my|ml|mt|mb|mr)-/,
         },
     ]
 };

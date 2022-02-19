@@ -8,9 +8,11 @@
 </script>
 
 <template>
-    <div class="p-3 h-screen flex items-center justify-center bg-blue-400">
-        <div class="p-4 rounded shadow text-center w-[800px] bg-white">
-            <Button color="red">Submit</Button>
+    <div class="p-3 min-h-screen flex items-center justify-center bg-blue-400">
+        <div class="p-4 rounded shadow w-[800px] bg-white">
+            <Button size="xs" color="red">
+                Large Button
+            </Button>
         </div>
     </div>
 </template>
