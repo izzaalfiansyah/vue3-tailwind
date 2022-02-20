@@ -1,15 +1,10 @@
-<template>
-  <div class="home">
-    <h1>This is a home page</h1>
-  </div>
-</template>
+<script setup>
+    import Card from '../component/Card.vue';
+</script>
 
-<style>
-@media (min-width: 1024px) {
-  .home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<template>
+    <Card> this is a home page </Card>
+    <Card>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iste vero maiores numquam ullam neque unde nemo asperiores natus at minus quasi quis nam, fugit est expedita nulla architecto reprehenderit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis veniam magnam libero? Possimus excepturi quia a nam voluptatum reiciendis molestias dicta? Voluptates doloribus beatae iste quisquam officia delectus voluptate dignissimos? </p>
+    </Card>
+</template>

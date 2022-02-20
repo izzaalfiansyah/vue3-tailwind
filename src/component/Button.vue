@@ -31,7 +31,7 @@
 </script>
 
 <template>
-    <button :class="`text-white bg-${color}-700 hover:bg-${color}-800 focus:ring-4 focus:ring-${color}-300 font-medium rounded-lg text-${size} ${state.padding} text-center m-1`">
+    <button :class="`text-white bg-${color}-700 hover:bg-${color}-800 focus:ring-4 focus:ring-${color}-300 font-medium rounded-lg text-${size} ${state.padding} text-center mr-2`">
         <slot></slot>
     </button>
 </template>

@@ -13,12 +13,13 @@ module.exports = {
     safelist: [
         {
             pattern: /(bg|text|border|ring)-/,
+            variants: ['hover', 'focus']
         },
         {
             pattern: /(p|px|py|pl|pt|pb|pr)-/,
         },
-        {
-            pattern: /(m|mx|my|ml|mt|mb|mr)-/,
-        },
+        // {
+        //     pattern: /(m|mx|my|ml|mt|mb|mr)-/,
+        // },
     ]
 };
