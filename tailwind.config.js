@@ -1,4 +1,5 @@
 module.exports = {
+    darkMode: 'class',
     content: [
         "./src/**/*.{html,js,vue}",
         "./index.html",
@@ -12,14 +13,8 @@ module.exports = {
     ],
     safelist: [
         {
-            pattern: /(bg|text|border|ring)-/,
-            variants: ['hover', 'focus']
+            pattern: /(translate|bg|text|border|ring|p|px|py|pl|pt|pb|pr|w|m|mx|my|ml|mt|mb|mr)-/,
+            variants: ['hover', 'focus', 'dark']
         },
-        {
-            pattern: /(p|px|py|pl|pt|pb|pr)-/,
-        },
-        // {
-        //     pattern: /(m|mx|my|ml|mt|mb|mr)-/,
-        // },
     ]
 };

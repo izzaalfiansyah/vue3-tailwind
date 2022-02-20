@@ -30,26 +30,34 @@
     const sidebarItems = [
         {
             path: '/',
-            title: 'Home',
+            title: 'Dashboard',
             icon: 'home',
         },
         {
-            path: '/kanban',
-            title: 'Kanban',
+            path: '/about',
+            title: 'About',
             icon: 'coffee',
         },
         {
-            path: '/inbox',
-            title: 'Inbox',
-            icon: 'download',
+            path: '/component',
+            title: 'Component',
+            icon: 'chart-box',
         },
         {
-            path: '/user',
-            title: 'User',
+            path: '/profile',
+            title: 'Profile',
             icon: 'account',
         },
         {
-            path: '/logout',
+            divider: true,
+        },
+        {
+            path: '/login',
+            title: 'Login',
+            icon: 'login',
+        },
+        {
+            path: '/login',
             title: 'Logout',
             icon: 'logout',
         },
@@ -61,7 +69,7 @@
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-700">
         <Navbar :items="navbarItems" title="VueWind">
             <template #prepend>
                 <button type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" @click="sidebar.open = !sidebar.open">
@@ -70,8 +78,20 @@
             </template>
         </Navbar>
         <div class="flex flex-row flex-wrap">
-            <div class="lg:w-1/4 w-5/6 lg:relative absolute top-0 bottom-0 lg:p-5">
-                <Sidebar :items="sidebarItems" class="lg:block" :class="{'hidden': !sidebar.open}"></Sidebar>
+            <div :class="`lg:w-1/4 h-full w-full lg:relative fixed top-0 bottom-0 lg:p-5 transition duration-200 lg:translate-x-0 ${sidebar.open ? 'translate-x-0' : '-translate-x-[300px]'}`">
+                <Sidebar :items="sidebarItems">
+                    <template #cta>
+                        <div class="p-4 mt-6 rounded-lg bg-blue-100 dark:bg-blue-900" role="alert">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-orange-100 shadow-sm text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900">Beta</span>
+                            </div>
+                            <p class="mb-3 text-sm text-blue-900 dark:text-blue-400">
+                                Preview the new Flowbite dashboard navigation! You can turn the new navigation off for a limited time in your profile.
+                            </p>
+                            <a class="text-sm text-blue-900 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" href="#">Turn new navigation off</a>
+                        </div>
+                    </template>
+                </Sidebar>
             </div>
             <div class="lg:w-3/4 w-full lg:p-5 p-2">
                 <RouterView></RouterView>
