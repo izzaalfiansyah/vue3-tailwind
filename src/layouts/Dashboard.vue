@@ -77,8 +77,8 @@
                 </button>
             </template>
         </Navbar>
-        <div class="flex flex-row flex-wrap">
-            <div :class="`lg:w-1/4 h-full w-full lg:relative fixed top-0 bottom-0 lg:p-5 transition duration-200 lg:translate-x-0 ${sidebar.open ? 'translate-x-0' : '-translate-x-[300px]'}`">
+        <div class="flex flex-row flex-wrap h-full">
+            <div :class="`lg:w-1/4 w-full lg:relative fixed top-0 bottom-0 lg:p-5 transition duration-200 lg:translate-x-0 ${sidebar.open ? 'translate-x-0' : '-translate-x-[300px]'}`">
                 <Sidebar :items="sidebarItems">
                     <template #cta>
                         <div class="p-4 mt-6 rounded-lg bg-blue-100 dark:bg-blue-900" role="alert">
